@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 1;
+}
+
+.nav-list-1 {
+  display: flex;
+  padding: 4px 40px;
+  background-color: #eee;
+}
+
+.nav-items-1:nth-child(n + 1) {
+  margin: 0 10px;
+}
+
+.nav-items-1:nth-child(1) {
+  margin-right: auto;
+}
+
+.icons-image {
+  margin-right: 5px;
+}
+
+.top-icons {
+  writing-mode: vertical-lr;
+}
+
+.vertical-line {
+  border-left: 1px solid gray;
+  margin: 0 25px;
+}
+
+nav ul li.nav-items-1 a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-items {
+  margin: 0 10px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.static-top-nav {
+  padding: 0 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.static-top-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.static-top-nav ul li {
+  margin: auto 10px;
+  display: flex;
+}
+
+.static-top-nav ul li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.static-top-nav ul li a div {
+  margin: auto 5px;
+}
+
+.logo-img {
+  width: 300px;
+}
+
+.Navbar-Escape {
+  position: relative;
+  top: 150px;
+}
+
+@media (max-width: 940px) {
+  .logo-img {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-list-1 {
+    padding: 4px 18px;
+  }
+  .static-top-nav {
+    padding: 0 17px;
+  }
+  .logo-img {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .top-icons {
+    display: none;
+  }
+
+  div.container
+    > nav.static-top-nav
+    > ul:nth-child(2)
+    > li
+    > a
+    > div:nth-child(2) {
+    display: none;
+  }
+
+  div.container > nav.static-top-nav > ul:nth-child(2) > li:nth-child(2) {
+    display: none;
+  }
+
+  .static-top-nav {
+    padding: 0 10px 0 0;
+  }
+
+  .static-top-nav ul li {
+    margin: auto 15px;
+  }
+
+  .nav-items-1:nth-child(n + 3),
+  .vertical-line {
+    display: none;
+  }
+
+  .nav-items-1:nth-child(1) {
+    margin: auto;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .navbar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    transition: left 0.4s;
+  }
+
+  .change {
+    left: 0;
+  }
+
+  .hamburger-menu {
+    width: 21px;
+    height: 18px;
+    position: fixed;
+    top: 6px;
+    left: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: orange;
+    transition: all 0.4s;
+  }
+
+  .change .line1 {
+    transform: rotateZ(-45deg) translate(-17px, 5px);
+  }
+
+  .change .line2 {
+    opacity: 0;
+  }
+
+  .change .line3 {
+    transform: rotateZ(45deg) translate(-3px, 8px);
+  }
+
+  .nav-list {
+    text-align: left;
+    margin-top: 80px;
+    display: block;
+  }
+
+  .nav-list-1 {
+    padding: 4px 20px 4px 55px;
+  }
+
+  .nav-items {
+    margin: 18px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+    color: white;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-img {
+    width: 110px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-link {
+    font-size: 10px;
+  }
+  .navbar {
+    width: 180px;
+  }
+  div.container
+    > nav.static-top-nav
+    > ul:nth-child(2)
+    > li
+    > a
+    > div:nth-child(1)
+    > img {
+    width: 20px;
+  }
+  .static-top-nav ul li {
+    margin: auto 8px;
+  }
+  .nav-list-1 {
+    padding: 4px 10px 4px 38px;
+  }
+  .hamburger-menu {
+    width: 16.8px;
+    height: 14.4px;
+    left: 22px;
+  }
+  .nav-list {
+    margin-top: 40px;
+  }
+  .nav-items {
+    margin: 5px;
+  }
+  .change .line1 {
+    transform: rotateZ(-45deg) translate(-17px, 6px);
+  }
+  .change .line3 {
+    transform: rotateZ(45deg) translate(0, 10px);
+  }
+}
+
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transition: all 0.4s;
+}
+
+.nav-link::after {
+  bottom: 0;
+  transform-origin: left;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
